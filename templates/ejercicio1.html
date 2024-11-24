@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Configuración básica del documento -->
+    <meta charset="UTF-8"> <!-- Define la codificación de caracteres -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Habilita el diseño responsivo -->
+    <title>Formulario de Pintura</title> <!-- Título que aparece en la pestaña del navegador -->
+
+    <!-- Enlace al archivo CSS que contiene los estilos -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <!-- Encabezado principal del formulario -->
+    <header>
+        <!-- Título del formulario -->
+        <h1>Formulario de Pintura</h1>
+
+        <!-- Barra de navegación -->
+        <nav>
+            <!-- Enlace al menú principal -->
+            <a href="/">Inicio</a>
+
+            <!-- Enlace al ejercicio 2 (comentado el enlace al ejercicio 1 como ejemplo) -->
+            <!--<a href="/ejercicio1">Ejercicio 1</a>-->
+            <a href="/ejercicio2">Ejercicio 2</a> <!-- Enlace al ejercicio 2 -->
+        </nav>
+    </header>
+
+    <!-- Contenedor principal del formulario -->
+    <div class="container">
+        <!-- Formulario para calcular el costo de pintura -->
+        <form method="POST">
+            <!-- Campo para ingresar el nombre -->
+            <label for="nombre">Ingresa tu nombre:</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre" required>
+
+            <!-- Campo para ingresar la edad -->
+            <label for="edad">Ingresa tu edad:</label>
+            <input type="number" id="edad" name="edad" placeholder="Escribe tu edad" required>
+
+            <!-- Campo para ingresar la cantidad de tarros -->
+            <label for="tarros">Cantidad de tarros:</label>
+            <input type="number" id="tarros" name="tarros" placeholder="Cantidad" required>
+
+            <!-- Botón para enviar el formulario -->
+            <button type="submit">Calcular</button>
+        </form>
+
+        <!-- Mostrar los resultados si existen -->
+        {% if resultado %}
+        <div class="result-container">
+            <h2>Resultados:</h2>
+            <p><strong>Nombre:</strong> {{ resultado.nombre }}</p> <!-- Muestra el nombre ingresado -->
+            <p><strong>Total sin descuento:</strong> ${{ resultado.total_sin_descuento }}</p> <!-- Total antes del descuento -->
+            <p><strong>Descuento aplicado:</strong> ${{ resultado.descuento }}</p> <!-- Descuento calculado -->
+            <p><strong>Total con descuento:</strong> ${{ resultado.total_con_descuento }}</p> <!-- Total después del descuento -->
+        </div>
+        {% endif %}
+
+        <!-- Botón para volver al menú principal -->
+        <div class="return-button">
+            <a href="/">Volver al Menú</a>
+        </div>
+    </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

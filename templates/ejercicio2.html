@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Configuración básica de la página -->
+    <meta charset="UTF-8"> <!-- Define la codificación de caracteres como UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Permite que la página sea responsiva en dispositivos móviles -->
+    <title>Formulario de Inicio de Sesión</title> <!-- Título que aparecerá en la pestaña del navegador -->
+
+    <!-- Enlace al archivo de estilos CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <!-- Encabezado principal -->
+    <header>
+        <h1>Formulario de Inicio de Sesión</h1> <!-- Título del formulario -->
+        <nav> <!-- Barra de navegación -->
+            <a href="/">Inicio</a> <!-- Enlace al menú principal -->
+            <a href="/ejercicio1">Ejercicio 1</a> <!-- Enlace al ejercicio 1 -->
+            <!-- <a href="/ejercicio2">Ejercicio 2</a> --> <!-- Comentado: enlace al ejercicio 2 -->
+        </nav>
+    </header>
+
+    <!-- Contenedor principal -->
+    <div class="container">
+        <!-- Formulario de inicio de sesión -->
+        <form method="POST"> <!-- Envío de datos usando el método POST -->
+            <label for="usuario">Ingresa tu nombre:</label> <!-- Etiqueta para el campo del nombre de usuario -->
+            <input type="text" id="usuario" name="usuario" placeholder="Escribe tu usuario" required> <!-- Campo de texto para el usuario -->
+
+            <label for="contraseña">Ingresa tu contraseña:</label> <!-- Etiqueta para el campo de contraseña -->
+            <input type="password" id="contraseña" name="contraseña" placeholder="Escribe tu contraseña" required> <!-- Campo de entrada para la contraseña -->
+
+            <button type="submit">Verificar</button> <!-- Botón para enviar el formulario -->
+        </form>
+
+        <!-- Sección para mostrar el mensaje si existe -->
+        {% if mensaje %}
+        <div class="result-container">
+            <h2>{{ mensaje }}</h2> <!-- Muestra el mensaje recibido desde el servidor -->
+        </div>
+        {% endif %}
+
+        <!-- Botón para regresar al menú principal -->
+        <div class="return-button">
+            <a href="/">Volver al Menú</a> <!-- Enlace estilizado para volver al menú -->
+        </div>
+    </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+

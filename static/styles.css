@@ -1,0 +1,159 @@
+/* Estilos Generales */
+body {
+    font-family: Arial, sans-serif; /* Fuente predeterminada */
+    margin: 0; /* Sin márgenes en la página */
+    padding: 0; /* Sin relleno adicional */
+    background-color: #ffffff; /* Color de fondo blanco (puedes cambiarlo según sea necesario) */
+    color: #333; /* Color del texto: gris oscuro */
+    display: flex; /* Usamos flexbox para la disposición */
+    flex-direction: column; /* Ordenamos los elementos verticalmente */
+    align-items: center; /* Centramos los elementos horizontalmente */
+    justify-content: flex-start; /* Alineamos los elementos en la parte superior */
+    min-height: 100vh; /* Altura mínima igual a la altura de la ventana */
+}
+
+/* Estilos del Encabezado */
+header {
+    background-color: #0050ff; /* Color de fondo verde */
+    padding: 10px; /* Espaciado interno */
+    text-align: center; /* Centramos el texto */
+    border-radius: 10px; /* Bordes redondeados */
+    color: white; /* Texto en color blanco */
+    font-size: 14px; /* Tamaño del texto */
+    font-weight: bold; /* Texto en negrita */
+    width: 50%; /* El encabezado ocupa el 50% del ancho */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 1.3); /* Sombra para dar un efecto de elevación */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición suave al interactuar */
+}
+
+/* Estilos de Navegación */
+nav {
+    text-align: center; /* Centramos los enlaces de navegación */
+    margin-top: 10px; /* Espaciado superior */
+}
+
+nav a {
+    margin: 0 15px; /* Espaciado entre los enlaces */
+    text-decoration: none; /* Eliminamos el subrayado de los enlaces */
+    color: #e4e4e4; /* Color del texto en gris claro */
+    font-weight: bold; /* Enlaces en negrita */
+    transition: color 0.2s, text-shadow 0.3s; /* Transición suave para los efectos */
+}
+
+nav a:hover {
+    text-shadow: 0px 0px 4px #ffffff; /* Efecto de iluminación al pasar el cursor */
+}
+
+/* Estilos del Formulario */
+form {
+    max-width: 400px; /* Ancho máximo del formulario */
+    margin: 40px auto; /* Centrado horizontal y espaciado vertical */
+    padding: 20px; /* Espaciado interno */
+    background-color: #ffffff; /* Fondo blanco */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+form label {
+    display: block; /* Cada etiqueta en una línea separada */
+    margin-bottom: 5px; /* Espaciado inferior */
+    font-size: 14px; /* Tamaño del texto */
+    font-weight: bold; /* Texto en negrita */
+    color: #555; /* Color del texto: gris intermedio */
+}
+
+form input {
+    width: 91.5%; /* Ancho del campo de texto */
+    padding: 10px; /* Espaciado interno */
+    margin-bottom: 20px; /* Espaciado inferior */
+    border: 1px solid #ccc; /* Borde gris claro */
+    border-radius: 5px; /* Bordes redondeados */
+}
+
+form button {
+    width: 100%; /* Botón ocupa todo el ancho del formulario */
+    padding: 10px; /* Espaciado interno */
+    background-color: #800080; /* Color morado del botón */
+    color: white; /* Texto blanco */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    font-size: 16px; /* Tamaño del texto */
+    cursor: pointer; /* Cambia el cursor al pasar el ratón */
+    transition: background-color 0.2s; /* Transición suave del color de fondo */
+}
+
+form button:hover {
+    background-color: #9d2ee6; /* Cambia a un morado más claro al pasar el cursor */
+}
+
+/* Estilos del Botón de Regreso */
+.return-button {
+    text-align: center; /* Centra el botón */
+    margin-top: 20px; /* Espaciado superior */
+}
+
+.return-button a {
+    display: inline-block; /* Enlace como un botón */
+    padding: 10px 20px; /* Espaciado interno */
+    background-color: #d9d9d9; /* Fondo gris claro */
+    color: #333; /* Texto gris oscuro */
+    text-decoration: none; /* Sin subrayado */
+    font-size: 16px; /* Tamaño del texto */
+    border-radius: 5px; /* Bordes redondeados */
+    font-weight: bold; /* Texto en negrita */
+    transition: background-color 0.2s; /* Transición suave del color de fondo */
+}
+
+.return-button a:hover {
+    background-color: #c0c0c0; /* Cambia a gris más oscuro al pasar el cursor */
+}
+
+/* Botones del Menú Principal */
+.menu-container {
+    display: flex; /* Usamos flexbox para los botones */
+    justify-content: center; /* Centramos los botones horizontalmente */
+    align-items: center; /* Centramos los botones verticalmente */
+    gap: 20px; /* Espaciado entre los botones */
+    margin-top: 40px; /* Espaciado superior */
+}
+
+.menu-container a {
+    display: inline-block; /* Botones en línea */
+    width: 180px; /* Ancho de los botones */
+    height: 180px; /* Altura de los botones */
+    text-align: center; /* Texto centrado horizontalmente */
+    line-height: 180px; /* Texto centrado verticalmente */
+    color: white; /* Texto blanco */
+    font-size: 22px; /* Tamaño del texto */
+    font-weight: bold; /* Texto en negrita */
+    text-decoration: none; /* Sin subrayado */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 1.3); /* Sombra para dar efecto de elevación */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transiciones suaves */
+}
+
+.menu-container a:first-child {
+    background-color: #800080; /* Color morado para el primer botón */
+}
+
+.menu-container a:last-child {
+    background-color: #00cc00; /* Color verde para el segundo botón */
+}
+
+.menu-container a:hover {
+    transform: scale(1.1); /* Amplía el botón al pasar el cursor */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3); /* Sombra más intensa al pasar el cursor */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
